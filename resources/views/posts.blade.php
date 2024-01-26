@@ -4,9 +4,7 @@
 
 @section('content')
 
-
-
-<div class="w-full flex flex-col items-center min-h-screen">
+<div class="w-full flex flex-col items-center">
 
     @if(count($posts) === 0)
        <h2 class="mt-10 mb-10 font-bold text-xl uppercase">Não há postagens</h2>           
@@ -14,11 +12,10 @@
        <h2 class="mt-10 mb-10 font-bold text-xl uppercase">Postagens</h2>    
     @endif
     
-    <div class="w-full max-w-5xl grid grid-cols-2 gap-5 py-10">
-
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
 
       @foreach($posts as $post)
-        <article class="w-full bg-sky-300 flex flex-col gap-2 rounded py-5 px-2">
+        <article class="w-full bg-sky-300 flex flex-col gap-2 rounded py-5 px-2 shadow-md">
              <!-- title -->
             <div class="w-full flex flex-col px-4 py-2 gap-4">
 

@@ -10,14 +10,14 @@ class EventController extends Controller
     
     public function index(){
        
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'desc')->get();
         return view('posts', [
             'posts' => $posts
         ]);
         
     }
  
-    public function addpost(){
+    public function show(){
         return view('addPost'); 
      
     }
@@ -26,7 +26,7 @@ class EventController extends Controller
               
        Post::findOrFail($id)->delete();
  
-       return redirect("/")->with('msg', 'Post excluido com sucesso!');
+       return redirect("/");
     }
  
  

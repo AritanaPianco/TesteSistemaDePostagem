@@ -6,9 +6,9 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
 
-Route::get("/addpost", [EventController::class, 'addpost']);
+Route::get("/addpost", [EventController::class, 'show']);
 
-Route::post("/postar", [EventController::class, 'store']);
+Route::post("/post/create", [EventController::class, 'store']);
 
 Route::delete("/posts/{id}", [EventController::class, 'destroy']);
 

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
-    <!--adicionando Tailwind-->
+
+    <!--adicionando Tailwind via cdn-->
     <script src="https://cdn.tailwindcss.com"></script> 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> 
 
@@ -13,14 +14,14 @@
     <title>@yield('title')</title>
 
 </head>
-<body>
+<body class="flex flex-col items-center justify-center min-h-full bg-neutral-100">
   
     
      <header class="w-full bg-blue-400 py-5 flex items-center justify-center">
-         <div class="w-full flex max-w-7xl justify-between">
-             <h2 class="font-bold text-lg tracking-wide uppercase">ProjetoPostagens</h2>
+         <div class="w-full flex max-w-7xl justify-between items-center px-2">
+             <h2 class="font-bold text-base md:text-lg tracking-wide uppercase">ProjetoPostagens</h2>
              
-             <nav class="flex justify-evenly gap-10 font-medium text-slate-200 items-center uppercase">
+             <nav class="flex justify-evenly gap-2 md:gap-10 font-medium text-slate-200 items-center uppercase">
 
                     @auth
                         <a href="/">Posts</a>
